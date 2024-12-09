@@ -2,11 +2,8 @@
 
 export default function Home() {
   return (
-    <div className="text-red-900 text-6xl bg-purple-200">
-      Hello!
-      <div className = "flex flex-row justify-center text-blue-300">
-        aosjdaodwoefewnf
+    <div className="flex items-center h-screen text-black-700 text-6xl">
+      Hello, I am Jun Kai!
       </div>
-    </div>
   );
 }
