@@ -1,6 +1,3 @@
-import { Boxes } from "@/components/ui/background-boxes";
-import { Card, CardContent, CardDescription, CardHeader , CardTitle} from "@/components/ui/card";
-
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 export interface Artwork {
   artist: string
