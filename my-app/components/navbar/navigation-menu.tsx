@@ -37,14 +37,6 @@ export function NavigationBar() {
                 </Link>
             </NavigationMenuItem>
             </div>
-            <div className="flex gap-4">
-              <SignedOut>
-                <SignInButton />
-              </SignedOut>
-              <SignedIn>
-                <UserButton />
-              </SignedIn>
-            </div>
         </NavigationMenu>
     )
 }
