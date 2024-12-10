@@ -1,10 +1,10 @@
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
-export interface Artwork {
+interface Artwork {
   artist: string
   art: string
 }
  
-export const works: Artwork[] = [
+const works: Artwork[] = [
   {
     artist: "Cocaine",
     art: "/cocaine.jpg",
