@@ -1,12 +1,6 @@
 
 import Link from "next/link"
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, navigationMenuTriggerStyle } from "../ui/navigation-menu"
-import {
-    SignedIn,
-    SignedOut,
-    SignInButton,
-    UserButton
-} from '@clerk/nextjs'
 
 
 export function NavigationBar() {
