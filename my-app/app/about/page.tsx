@@ -10,42 +10,77 @@ import {
 } from "@/components/ui/card";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { cn } from "@/lib/utils";
-import { ArrowRightIcon } from "lucide-react";
 import React from "react";
 import Image from "next/image";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import { Timeline } from "@/components/ui/timeline";
 
 export default function About() {
-  const content = [
-    {
-      title: "general",
-      description: "My name is Jun Kai. I am currently studying in Dunman High and I am Secondary 3 this year. My CCA is basketball and I won the national championship in 2023. ",
-      image_url: "/dhsnationalchamp.avif",
-      color:"bg-black"
-    },
-    {
-      title: "hobbies",
-      description:
-        "During my freetime, I like to watch shows, more specifically animes. I watch a variety of anime genres, from romance to action. My favourite action anime is Attack on Titan, while my favourite romance anime is Your Lie in April.",
-      image_url: "/scale.png",
-      color:"bg-slate-900"
-    },
-    {
-      title: "games",
-      description:
-        "Other than watching shows, I also like to play mobile games to destress during my freetime. I mainly play mobile legends and a bit of brawl stars. I also have a bunch of other games in my phone that I rarely play.",
-      image_url: "/mobilelegends2.webp",
-      color:"bg-neutral-900"
-    },
-    {
-      title: "sports",
-      description:
-        "Other than basketball, I also play a bunch of other sports like Football, Badminton, Table tennis, etc. I was in my primary school team for Table Tennis and won 3rd in the East Zone NSG tournaments. As for the other sports, I just play them for fun.",
-      image_url: "/mobilelegends2.webp",
-      color:"bg-black",
-    },
-  ];
+    const data = [
+        {
+          title: "General",
+          content: (
+            <div>
+              <p className="text-white text-xl font-normal mb-8">
+                Hi I am Jun Kai. I am currently stuyding in Dunman High and my CCA is basketball. My team won the NSG Nationals Tournament in 2023.
+              </p>
+              <div className="">
+                <Image
+                  src="/dhsnationalchamp.avif"
+                  alt="Jun Kai's National Champion Team"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-1/2 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
+            </div>
+          ),
+        },
+        {
+          title: "Hobbies",
+          content: (
+            <div>
+              <p className="text-white dark:text-neutral-200 text-xl font-normal mb-8">
+                I like to watch shows during my freetime, more specifically anime. I watch a variety of animes from romance to action.
+              </p>
+              <p className="text-white dark:text-neutral-200 text-xl font-normal mb-8">
+                My favourite anime is Attack on Titan.
+              </p>
+              <div className="">
+                <Image
+                  src="/scale.png"
+                  alt="hero template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-1/2 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
+            </div>
+          ),
+        },
+        {
+          title: "Games",
+          content: (
+            <div>
+              <p className="text-white dark:text-neutral-200 text-xl font-normal mb-4">
+                Other than watching shows, I also like to play mobile games during my freetime. 
+              </p>
+              <p className="text-white dark:text-neutral-200 text-xl font-normal mb-8">
+               I mainly play mobile legends and a bit of brawl stars. I have a bunch of other games in my phone that I barely play. 
+              </p>
+              <div className="">
+                <Image
+                  src="/mobile-legends.png"
+                  alt="hero template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-1/2 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
+            </div>
+          ),
+        },
+      ];
   return (
     <section className="bg-black w-screen">
       <div className="h-screen w-screen flex flex-col items-center justify-center overflow-hidden">
@@ -53,7 +88,7 @@ export default function About() {
           <section id="header">
             <BlurFade delay={0.25} inView>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                About Me
+                Hello!
               </h2>
             </BlurFade>
             <BlurFade delay={0.5} inView>
@@ -86,7 +121,7 @@ export default function About() {
         </div>
       </div>
       <div className="h-screen w-screen">
-        {content.map((item,index)=>(
+        {/* {content.map((item,index)=>(
             <BlurFade inView delay={0.10}>
                 <div key={index} className={`h-screen w-screen flex flex-row items-center justify-center ${item.color}`}>
                     <h1 className="font-bold text-white">
@@ -96,7 +131,8 @@ export default function About() {
                     <img src={item.image_url} className="w-1/2 h-1/2 img-fluid"></img>
                 </div>
             </BlurFade>
-        ))}
+        ))} */}
+        <Timeline data={data}/>
       </div>
     </section>
   );

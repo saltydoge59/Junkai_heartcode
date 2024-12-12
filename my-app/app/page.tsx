@@ -4,8 +4,6 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import { FlipWords } from "@/components/ui/flip-words";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-
- 
 const drugs = [
   {
     name: "Cocaine",
@@ -21,6 +19,11 @@ const drugs = [
     name: "Meth",
     image: "/meth-thumb.jpg",
     desc:"At very high doses, it can induce pychosis breakdown of skeletal muscle, seizures, and bleeding in the brain."
+  },
+  {
+    name: "Cannabis",
+    image: "/cannabis.webp",
+    desc:"Cannabis has various mental and physical effects which include euphoria, altered states of mind and sense of time, difficulty concentrating , impaired short-term memory and ipaired body movement."
   },
 ]
 

@@ -75,15 +75,15 @@ export default function Quiz() {
         // console.log(values)
         }
       return (
-        <div className={`styles.quizContainer my-16 p-3`}>
+        <div className={`styles.quizContainer p-3 bg-black h-screen`}>
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="w2/3 space-y-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="w2/3 my-16 space-y-6 text-white">
                      <FormField
                         control={form.control}
                         name="name"
                         render={({ field }) => (
                             <FormItem>
-                            <FormLabel style={{ color: 'black' }}>Question 1:</FormLabel>
+                            <FormLabel>Question 1:</FormLabel>
                             <FormDescription className={styles.questionText}>What is your name?</FormDescription>
                             <FormControl>
                                 <Input placeholder="Your name here" {...field} />
@@ -97,7 +97,7 @@ export default function Quiz() {
                     name="question1"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel style={{ color: 'black' }}>Question 2:</FormLabel>
+                            <FormLabel>Question 2:</FormLabel>
                             <FormDescription className={styles.questionText}>In Singapore, what is the legal limit for possessing cannabis for personal use?</FormDescription>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
@@ -125,7 +125,7 @@ export default function Quiz() {
                     name="question2"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel style={{ color: 'black' }}>Question 3:</FormLabel>
+                            <FormLabel>Question 3:</FormLabel>
                             <FormDescription className={styles.questionText}>What is the peanlty for trafficking 500 grams or more of cannabis in Singapore?</FormDescription>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
@@ -152,7 +152,7 @@ export default function Quiz() {
                     name="question3"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel style={{ color: 'black' }}>Question 4:</FormLabel>
+                            <FormLabel>Question 4:</FormLabel>
                             <FormDescription className={styles.questionText}>Which organisation provides support nd rehabilitation services for individuals struggling with drug abuse in Singapore?</FormDescription>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
@@ -180,7 +180,7 @@ export default function Quiz() {
                     name="question4"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel style={{ color: 'black' }}>Question 5:</FormLabel>
+                            <FormLabel>Question 5:</FormLabel>
                             <FormDescription className={styles.questionText}>What is one common long-term effect of drug abuse on mental health?</FormDescription>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
@@ -207,7 +207,7 @@ export default function Quiz() {
                     name="question5"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel style={{ color: 'black' }}>Question 6:</FormLabel>
+                            <FormLabel>Question 6:</FormLabel>
                             <FormDescription className={styles.questionText}>Drug abuse only affects the individual using drugs and has no impact on their family or community. (True/False) </FormDescription>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
@@ -232,7 +232,7 @@ export default function Quiz() {
                     name="question6"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel style={{ color: 'black' }}>Question 7:</FormLabel>
+                            <FormLabel>Question 7:</FormLabel>
                             <FormDescription className={styles.questionText}>What is the most effective way to combat drug abuse in communities?</FormDescription>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
