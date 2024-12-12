@@ -75,7 +75,7 @@ export default function Quiz() {
         // console.log(values)
         }
       return (
-        <div className={styles.quizContainer}>
+        <div className={`styles.quizContainer my-16 p-3`}>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="w2/3 space-y-6">
                      <FormField
