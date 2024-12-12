@@ -5,9 +5,9 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, navigationMenuT
 
 export function NavigationBar() {
     return (
-        <NavigationMenu className="flex justify-between min-w-full list-none h-16 relative top-0 p-5 h-[60px]">
+        <NavigationMenu className="flex justify-between min-w-full list-none h-16 fixed top-0 p-5 h-[60px] bg-transparent">
             <div className="flex">
-            <NavigationMenuItem>
+            <NavigationMenuItem className="mx-2">
                 <Link href="/" legacyBehavior passHref>
                     
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -16,15 +16,15 @@ export function NavigationBar() {
                     
                 </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem>
+            <NavigationMenuItem className="mx-2">
                 <Link href="/quiz" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                         Quiz
                     </NavigationMenuLink>
                 </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem>
-                <Link href="/about-me" legacyBehavior passHref>
+            <NavigationMenuItem className="mx-2">
+                <Link href="/about" legacyBehavior passHref>
                     <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                         About me
                     </NavigationMenuLink>

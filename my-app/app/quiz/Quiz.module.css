@@ -1,0 +1,13 @@
+.quizContainer {
+    /* background-image: url('/pixel3.gif'); Update with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 20px;
+}
+
+.questionText {
+    color: black; /* Change text color to black */
+    font-weight: bold; /* Make text bold */
+}
