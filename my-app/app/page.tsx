@@ -74,7 +74,7 @@ export default function Home() {
           particleColor="#FFFFFF"
         />
       </div>
-      <div className="text-6xl mx-auto font-bold text-white fixed top-96">
+      <div className="text-2xl md:text-6xl mx-auto font-bold text-white mb-4">
         Get high on life, not
         <FlipWords words={words} className="text-red-500"/> <br />
       </div>

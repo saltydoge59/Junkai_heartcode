@@ -30,6 +30,15 @@ export function NavigationBar() {
                     </NavigationMenuLink>
                 </Link>
             </NavigationMenuItem>
+            <NavigationMenuItem className="mx-2">
+                <Link href="/game" legacyBehavior passHref>
+                    
+                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                        Game 
+                    </NavigationMenuLink>
+                    
+                </Link>
+            </NavigationMenuItem>
             </div>
         </NavigationMenu>
     )

@@ -1,0 +1,76 @@
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.gameArea {
+  position: relative;
+  background-color: #fff;
+  border: 2px solid #000;
+  overflow: hidden;
+}
+
+.player {
+  position: absolute;
+  bottom: 0;
+  background-color: #00f;
+}
+
+.object {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.apple {
+  background-color: #f00;
+}
+
+.drug {
+  background-color: #0f0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.score, .lives {
+  flex: 1;
+  text-align: center;
+}
+
+.gameOver {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gameOver h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.gameOver button {
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.player {
+  position: absolute;
+  bottom: 0; /* Ensures the player is at the bottom of the game area */
+  left: 50%; /* Centers the player horizontally */
+  transform: translateX(-50%); /* Ensures perfect centering */
+}
