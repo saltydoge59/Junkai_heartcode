@@ -18,7 +18,7 @@
 .player {
   position: absolute;
   bottom: 0;
-  background-color: #00f;
+  background-color: transparent;
 }
 
 .object {
